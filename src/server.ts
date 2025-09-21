@@ -7,9 +7,6 @@ import {
 import express from 'express';
 import { join } from 'node:path';
 
-// Exposing the budget API
-import budget from './budget-data.json';
-
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
@@ -26,11 +23,6 @@ const angularApp = new AngularNodeAppEngine();
  * });
  * ```
  */
-
-// Passing budget data to the frontend
-app.get('/budget', (req, res) => {
-  res.json(budget);
-});
 
 /**
  * Serve static files from /browser

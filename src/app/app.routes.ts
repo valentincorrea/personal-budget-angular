@@ -8,7 +8,6 @@ import { Home } from './home/home';
 // import { Hero } from './hero/hero';
 import { Router } from 'express';
 import { About } from './about/about';
-// Exposing the budget API
 
 export const routes: Routes = [
   { path: '', component: Home },
