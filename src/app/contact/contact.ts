@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Hero } from '../hero/hero';
 import { Menu } from '../menu/menu';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-contact',
   imports: [Menu, Hero],
-  templateUrl: './about.html',
-  styleUrl: './about.scss',
+  templateUrl: './contact.html',
+  styleUrl: './contact.scss',
 })
-export class About {}
+export class Contact {}

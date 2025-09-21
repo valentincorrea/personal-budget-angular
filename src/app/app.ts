@@ -6,7 +6,8 @@ import { About } from './about/about';
 // This is the module that defines the main application component
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  // imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
