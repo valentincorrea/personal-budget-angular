@@ -7,6 +7,9 @@ import {
 import express from 'express';
 import { join } from 'node:path';
 
+// Exposing the budget API
+import budget from './budget-data.json';
+
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
@@ -24,6 +27,11 @@ const angularApp = new AngularNodeAppEngine();
  * ```
  */
 
+// Passing budget data to the frontend
+app.get('/budget', (req, res) => {
+  res.json(budget);
+});
+
 /**
  * Serve static files from /browser
  */
@@ -32,7 +40,7 @@ app.use(
     maxAge: '1y',
     index: false,
     redirect: false,
-  }),
+  })
 );
 
 /**
@@ -41,9 +49,7 @@ app.use(
 app.use((req, res, next) => {
   angularApp
     .handle(req)
-    .then((response) =>
-      response ? writeResponseToNodeResponse(response, res) : next(),
-    )
+    .then((response) => (response ? writeResponseToNodeResponse(response, res) : next()))
     .catch(next);
 });
 
