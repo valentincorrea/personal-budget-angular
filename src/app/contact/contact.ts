@@ -4,7 +4,7 @@ import { Menu } from '../menu/menu';
 
 @Component({
   selector: 'app-contact',
-  imports: [Menu, Hero],
+  imports: [Hero],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
