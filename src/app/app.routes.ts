@@ -9,9 +9,11 @@ import { Home } from './home/home';
 import { Router } from 'express';
 import { About } from './about/about';
 import { Contact } from './contact/contact';
+import { D3DonutChart } from './d3-donut-chart/d3-donut-chart';
 
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'about', component: About },
   { path: 'contact', component: Contact },
+  { path: 'd3chart', component: D3DonutChart },
 ];
